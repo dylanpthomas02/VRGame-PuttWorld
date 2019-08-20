@@ -11,28 +11,17 @@ public class VRMove : MonoBehaviour
     private bool _mInverted = false;
 
     Vector3 movement;
-
-    //private void OnGUI()
-    //{
-    //    float vertTouchPad = Input.GetAxis("Vertical");
-
-    //    if (leftController != null)
-    //    {
-    //        var touchPadVector = leftController.GetAxis(vertTouchPad);
-    //        GUILayout.Label(string.Format("Left X: {0:F2}, {1:F2}", touchPadVector.x, touchPadVector.y));
-    //    }
-
-    //    if (rightController != null)
-    //    {
-    //        var touchPadVector = rightController.GetAxis(vertTouchPad);
-    //        GUILayout.Label(string.Format("Right X: {0:F2}, {1:F2}", touchPadVector.x, touchPadVector.y));
-    //    }
-    //}
+    float horzTouchPad;
+    float vertTouchPad;
 
     void Update()
     {
-        float horzTouchPad = Input.GetAxis("Horizontal");
-        float vertTouchPad = Input.GetAxis("Vertical");
+        horzTouchPad = Input.GetAxis("Horizontal");
+        vertTouchPad = Input.GetAxis("Vertical");
+    }
+
+    private void FixedUpdate()
+    {
         movement = new Vector3(horzTouchPad, 0f, vertTouchPad);
 
         if (null != leftController)
