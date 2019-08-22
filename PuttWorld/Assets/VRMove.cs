@@ -2,13 +2,16 @@
 
 public class VRMove : MonoBehaviour
 {
-    public Transform rightController;
-    public GameObject leftController;
+    //public Transform rightController;
+    //public GameObject leftController;
 
     private float _mMoveSpeed = 2.5f;
     private float _mHorizontalTurnSpeed = 180f;
     private float _mVerticalTurnSpeed = 2.5f;
     private bool _mInverted = false;
+
+    public float sprintMultiplier = 1.5f;
+    bool sprint = false;
 
     Vector3 movement;
     float horzTouchPad;
@@ -18,31 +21,38 @@ public class VRMove : MonoBehaviour
     {
         horzTouchPad = Input.GetAxis("Horizontal");
         vertTouchPad = Input.GetAxis("Vertical");
+
+        if (Input.GetAxis("LeftTrigger") > 0.2f)
+        {
+            sprintMultiplier = 1.5f;
+        }
+        else
+        {
+            sprintMultiplier = 1f;
+        }
     }
 
     private void FixedUpdate()
     {
-        movement = new Vector3(horzTouchPad, 0f, vertTouchPad);
+        //if (leftController != null)
+        //{
+        Quaternion orientation = Camera.main.transform.rotation;
+        Vector3 moveDirection = orientation * Vector3.forward * vertTouchPad; // orientation * Vector3.forward * vertTouchPad
+        Vector3 pos = transform.position;
+        pos.x += moveDirection.x * _mMoveSpeed * Time.deltaTime * sprintMultiplier;
+        pos.z += moveDirection.z * _mMoveSpeed * Time.deltaTime * sprintMultiplier;
+        transform.position = pos;
+        //}
 
-        if (null != leftController)
+        //if (rightController != null)
+        //{
+        if (horzTouchPad > 0.1f || horzTouchPad < -0.1f)
         {
-            Quaternion orientation = Camera.main.transform.rotation;
-            Vector3 moveDirection = orientation * Vector3.forward * vertTouchPad; // + orientation * Vector3.right * touchPadVector.x
-            Vector3 pos = transform.position;
-            pos.x += moveDirection.x * _mMoveSpeed * Time.deltaTime;
-            pos.z += moveDirection.z * _mMoveSpeed * Time.deltaTime;
-            transform.position = pos;
-        }
-
-        if (null != rightController)
-        {
-            Quaternion orientation = transform.rotation;
-
             Vector3 euler = transform.rotation.eulerAngles;
 
-            //euler.x = Mathf.LerpAngle(euler.x, angle, _mVerticalTurnSpeed * Time.deltaTime);
             euler.y += horzTouchPad * _mHorizontalTurnSpeed * Time.deltaTime;
             transform.rotation = Quaternion.Euler(euler);
         }
+        //}
     }
 }

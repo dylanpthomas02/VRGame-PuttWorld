@@ -6,10 +6,9 @@ public class VRGrab : MonoBehaviour
     GameObject CollidingObject;
     GameObject grabbedObject;
 
-
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Interactable"))
+        if (other.gameObject.GetComponentInParent<VRGrabbable>())
         {
             CollidingObject = other.gameObject;
         }
@@ -37,6 +36,9 @@ public class VRGrab : MonoBehaviour
     {
         grabbedObject = CollidingObject;
         grabbedObject.transform.SetParent(gameObject.transform);
+        VRGrabbable grabbable = grabbedObject.GetComponent<VRGrabbable>();
+        grabbedObject.transform.SetPositionAndRotation(grabbable.snapOffset.localPosition,
+            grabbable.snapOffset.localRotation);
         Rigidbody rb = grabbedObject.GetComponent<Rigidbody>();
         rb.isKinematic = true;
     }
