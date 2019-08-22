@@ -103,8 +103,8 @@ GameObject:
   - component: {fileID: 4033021943404403318}
   - component: {fileID: 4033021943404403319}
   m_Layer: 0
-  m_Name: Putter
-  m_TagString: Untagged
+  m_Name: PutterLeft
+  m_TagString: Putter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
