@@ -36,9 +36,11 @@ public class VRGrab : MonoBehaviour
     {
         grabbedObject = CollidingObject;
         grabbedObject.transform.SetParent(gameObject.transform);
-        VRGrabbable grabbable = grabbedObject.GetComponent<VRGrabbable>();
-        grabbedObject.transform.SetPositionAndRotation(grabbable.snapOffset.localPosition,
-            grabbable.snapOffset.localRotation);
+        VRGrabbable grabbable = grabbedObject.GetComponent<VRGrabbable>() ?? grabbedObject.GetComponentInParent<VRGrabbable>();
+        if (grabbable == null) return;
+
+        grabbedObject.transform.SetPositionAndRotation(grabbable.snapOffset.position,
+            grabbable.snapOffset.rotation);
         Rigidbody rb = grabbedObject.GetComponent<Rigidbody>();
         rb.isKinematic = true;
     }
