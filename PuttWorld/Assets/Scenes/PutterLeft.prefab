@@ -101,7 +101,6 @@ GameObject:
   - component: {fileID: 4033021943402365471}
   - component: {fileID: 4033021943404403315}
   - component: {fileID: 4033021943404403318}
-  - component: {fileID: 4033021943404403319}
   m_Layer: 0
   m_Name: PutterLeft
   m_TagString: Putter
@@ -200,19 +199,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.052051898, y: 0.16097744, z: 0.77216625}
   m_Center: {x: 0.025359415, y: 0.025535967, z: 0.4010288}
---- !u!114 &4033021943404403319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4033021943404305631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d867fd12544a8d8479659afec2a0538a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 1.16
 --- !u!1 &4033021943506799640
 GameObject:
   m_ObjectHideFlags: 0
