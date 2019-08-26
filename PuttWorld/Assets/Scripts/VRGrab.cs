@@ -28,6 +28,7 @@ public class VRGrab : MonoBehaviour
     private void Release()
     {
         putter.transform.parent = null;
+        //putter.GetComponentInParent<BoxCollider>().enabled = true;
         Rigidbody rb = putter.GetComponent<Rigidbody>();
         rb.useGravity = true;
         rb.isKinematic = false;
@@ -42,6 +43,8 @@ public class VRGrab : MonoBehaviour
 
         putter.transform.localPosition = holdPosition;
         putter.transform.localEulerAngles = holdRotation;
+
+        //putter.GetComponentInParent<BoxCollider>().enabled = false;
     }
 
     void Release(GameObject obj)
