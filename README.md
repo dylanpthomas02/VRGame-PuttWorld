@@ -1,4 +1,4 @@
-# VRGame1-PuttWorld
+# VRGame-PuttWorld
 
 # Description
 Mini golf in night setting.
