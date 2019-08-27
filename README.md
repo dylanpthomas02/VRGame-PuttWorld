@@ -1,2 +1,11 @@
 # VRGame1-PuttWorld
-VR mini golf game
+
+# Description
+Mini golf in night setting.
+All models designed by me in Blender 2.80.
+
+# Gameplay
+![](puttworld.gif)
+
+# Unity version
+2018.3.14f1
