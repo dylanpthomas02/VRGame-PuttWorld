@@ -11,13 +11,15 @@ public class VRMove : MonoBehaviour
     bool sprint = false;
 
     Vector3 movement;
-    float horzTouchPad;
+    float strafeInput;
     float vertTouchPad;
+    float horzRightPad;
 
     void Update()
     {
-        horzTouchPad = Input.GetAxis("Horizontal");
-        vertTouchPad = Input.GetAxis("Vertical");
+        strafeInput = Input.GetAxis("Strafe");
+        vertTouchPad = Input.GetAxis("Forward");
+        horzRightPad = Input.GetAxis("Turn");
 
         if (Input.GetAxis("LeftTrigger") > 0.2f)
             sprintMultiplier = 1.7f;
@@ -27,21 +29,23 @@ public class VRMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // walk in the direction you are facing
-        // useful when you stop and rotate IRL and then try to move forward again.
         Quaternion orientation = Camera.main.transform.rotation;
+        //Vector3 strafing = orientation * Vector3.right * strafeInput;
         Vector3 moveDirection = orientation * Vector3.forward * vertTouchPad;
+
+
         Vector3 pos = transform.position;
+
         pos.x += moveDirection.x * _mMoveSpeed * Time.deltaTime * sprintMultiplier;
         pos.z += moveDirection.z * _mMoveSpeed * Time.deltaTime * sprintMultiplier;
         // apply movement to current position
         transform.position = pos;
 
         // include a dead zone so walking straight is easier
-        if (horzTouchPad > 0.1f || horzTouchPad < -0.1f)
+        if (horzRightPad > 0.1f || horzRightPad < -0.1f)
         {
             Vector3 euler = transform.rotation.eulerAngles;
-            euler.y += horzTouchPad * _mHorizontalTurnSpeed * Time.deltaTime;
+            euler.y += horzRightPad * _mHorizontalTurnSpeed * Time.deltaTime;
             transform.rotation = Quaternion.Euler(euler);
         }
     }
