@@ -9,7 +9,7 @@ public class VRGrab : MonoBehaviour
     public Vector3 holdRotation = new Vector3(0, 180, 0);
 
     private float triggerState = 0;
-    private bool holdingPutter = false;
+    public bool holdingPutter = false;
     private GameObject putter = null;
 
     void Update()
