@@ -103,7 +103,6 @@ GameObject:
   - component: {fileID: 3756413638768427201}
   - component: {fileID: 3756413638768427206}
   - component: {fileID: 3756413638768427207}
-  - component: {fileID: 4666895719870704647}
   m_Layer: 0
   m_Name: Hole
   m_TagString: Untagged
@@ -3548,16 +3547,3 @@ MonoBehaviour:
   - a: 256
     b: 258
   m_SelectedVertices: fc000000fd00000001010000fe000000ff0000000201000000010000
---- !u!65 &4666895719870704647
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3756413638768427205}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.100000024, y: 0.075179346, z: 0.1}
-  m_Center: {x: -0.050000012, y: 0.037589673, z: 0}

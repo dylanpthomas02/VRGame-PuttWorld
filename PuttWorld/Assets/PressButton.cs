@@ -17,7 +17,7 @@ public class PressButton : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("RightHand"))
+        if (other.gameObject.CompareTag("RightHand") && Time.time > 1f)
         {
             setActive = !setActive;
             source.PlayOneShot(source.clip);

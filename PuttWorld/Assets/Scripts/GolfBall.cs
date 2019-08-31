@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GolfBall : MonoBehaviour
 {
-    AudioSource source;
+    public AudioSource source;
 
     public int strokes { get; private set; }
 
