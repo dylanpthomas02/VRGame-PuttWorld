@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5612565610144549075}
   m_Layer: 11
   m_Name: CubeFollowerPrefab
-  m_TagString: Untagged
+  m_TagString: Putter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

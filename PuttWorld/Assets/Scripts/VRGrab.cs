@@ -18,7 +18,7 @@ public class VRGrab : MonoBehaviour
 
         if (holdingPutter)
         {
-            if (triggerState < 0.8f)
+            if (Input.GetButtonDown("DropPutter"))
             {
                 Release();
             }
@@ -63,7 +63,7 @@ public class VRGrab : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Putter"))
         {
-            if (triggerState > 0.8f && !holdingPutter)
+            if (triggerState > 0.6f && !holdingPutter)
             {
                 Grab(other.gameObject);
             }
