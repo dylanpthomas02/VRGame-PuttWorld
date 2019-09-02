@@ -106,7 +106,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6572371792886410947}
-  m_Material: {fileID: 13400000, guid: 392bb8dcfb488614eb3e0422813ad133, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -179,12 +179,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9041504009076086152, guid: 0ce5c569c6a942140b1ded98acd265da,
+    - target: {fileID: 3486363172843595693, guid: 0ce5c569c6a942140b1ded98acd265da,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3486363172843595693, guid: 0ce5c569c6a942140b1ded98acd265da,
+    - target: {fileID: 9041504009076086152, guid: 0ce5c569c6a942140b1ded98acd265da,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -264,12 +264,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9041504009076086152, guid: 0ce5c569c6a942140b1ded98acd265da,
+    - target: {fileID: 3486363172843595693, guid: 0ce5c569c6a942140b1ded98acd265da,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3486363172843595693, guid: 0ce5c569c6a942140b1ded98acd265da,
+    - target: {fileID: 9041504009076086152, guid: 0ce5c569c6a942140b1ded98acd265da,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -349,12 +349,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9041504009076086152, guid: 0ce5c569c6a942140b1ded98acd265da,
+    - target: {fileID: 3486363172843595693, guid: 0ce5c569c6a942140b1ded98acd265da,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3486363172843595693, guid: 0ce5c569c6a942140b1ded98acd265da,
+    - target: {fileID: 9041504009076086152, guid: 0ce5c569c6a942140b1ded98acd265da,
         type: 3}
       propertyPath: m_Enabled
       value: 0

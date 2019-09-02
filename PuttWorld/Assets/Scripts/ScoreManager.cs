@@ -10,7 +10,8 @@ public class ScoreManager : MonoBehaviour
     public int[] holeParScore;
     public int currentHole = 0;
     public Text[] playerParScoreText;
-    public Text[] playerHoleScoreText;
+    public Text[] holeStrokesText;
+    public Text[] courseParText;
 
     int previousHoleParScore = 0;
 
@@ -41,7 +42,7 @@ public class ScoreManager : MonoBehaviour
 
     public void UpdateScore()
     {
-        playerHoleScoreText[currentHole].text = strokes.ToString();
+        holeStrokesText[currentHole].text = strokes.ToString();
 
         if(holeComplete)
         {
@@ -51,23 +52,26 @@ public class ScoreManager : MonoBehaviour
 
     public void HoleCompleteUIUpdate()
     {
-        // get the current hole par score
+        // get the score for this hole...
         int thisHoleParScore = strokes - holeParScore[currentHole];
-        // add it to the previous hole's par score
+        // ...add it to the previous hole's score
         int cumulativeParScore = thisHoleParScore + previousHoleParScore;
-        // add the appropriate prefix to the score
-        if (cumulativeParScore > 0) // over par
-        {
+        // ...then add the appropriate prefix and text colour to the current score
+        if (cumulativeParScore > 0)
+        {   
+            // over par
             playerParScoreText[currentHole].text = "+" + cumulativeParScore.ToString();
             playerParScoreText[currentHole].GetComponent<Text>().color = Color.red;
         }
-        else if (cumulativeParScore < 0) // under par
-        {
+        else if (cumulativeParScore < 0)
+        {   
+            // under par
             playerParScoreText[currentHole].text = "-" + cumulativeParScore.ToString();
             playerParScoreText[currentHole].GetComponent<Text>().color = Color.green;
         }
-        else // even par
-        {
+        else
+        {   
+            // even par
             playerParScoreText[currentHole].text = "-";
         }
 
@@ -80,8 +84,6 @@ public class ScoreManager : MonoBehaviour
     {
         previousHole = currentHole;
         currentHole++;
-        Debug.Log(previousHole);
-        Debug.Log(currentHole);
         strokes = 0;
         holeComplete = false;
         UpdateScore();
@@ -97,6 +99,12 @@ public class ScoreManager : MonoBehaviour
         {
             Destroy(this.gameObject);
             return;
+        }
+
+        // update text to display the par score for each hole on the course
+        for (int i = 0; i < holeParScore.Length; i++)
+        {
+            courseParText[i].text = holeParScore[i].ToString();
         }
     }
 }

@@ -22,7 +22,7 @@ public class VRMove : MonoBehaviour
         horzRightPad = Input.GetAxis("Turn");
 
         if (Input.GetAxis("LeftTrigger") > 0.2f)
-            sprintMultiplier = 1.7f;
+            sprintMultiplier = 2f;
         else
             sprintMultiplier = 1f;
     }
@@ -32,7 +32,6 @@ public class VRMove : MonoBehaviour
         Quaternion orientation = Camera.main.transform.rotation;
         //Vector3 strafing = orientation * Vector3.right * strafeInput;
         Vector3 moveDirection = orientation * Vector3.forward * vertTouchPad;
-
 
         Vector3 pos = transform.position;
 
