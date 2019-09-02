@@ -6,14 +6,17 @@ public class GolfBall : MonoBehaviour
 {
     public AudioSource source;
 
-    public int strokes { get; private set; }
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("Putter"))
         {
             source.PlayOneShot(source.clip);
-            strokes++;
+            ScoreManager.instance.IncrementStrokes();
         }
     }
 }
