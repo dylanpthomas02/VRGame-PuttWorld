@@ -11,12 +11,15 @@ public class GolfBall : MonoBehaviour
         source = GetComponent<AudioSource>();
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Putter"))
         {
             source.PlayOneShot(source.clip);
             ScoreManager.instance.IncrementStrokes();
+            new WaitForSeconds(1f);
         }
     }
+
+    
 }
