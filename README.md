@@ -1,8 +1,8 @@
 # VRGame-PuttWorld
 
 # Description
-Mini golf in night setting.
-All models designed by me in Blender 2.80.
+Mini golf in tree lined environment.
+All models except foliage designed by me in Blender 2.80.
 
 # Gameplay
 ![](puttworld.gif)
