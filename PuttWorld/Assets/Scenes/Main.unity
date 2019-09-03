@@ -12645,6 +12645,7 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
+  - component: {fileID: 534669907}
   m_Layer: 0
   m_Name: VRCamera
   m_TagString: MainCamera
@@ -12734,6 +12735,24 @@ MonoBehaviour:
   m_TrackingType: 0
   m_UpdateType: 0
   m_UseRelativeTransform: 1
+--- !u!114 &534669907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f9ccf945017a8546a70c9af56acefa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  captureWidth: 1920
+  captureHeight: 1080
+  hideGameObject: {fileID: 0}
+  optimizeForManyScreenshots: 1
+  format: 1
+  folder: 
 --- !u!43 &543277626
 Mesh:
   m_ObjectHideFlags: 0
@@ -16359,7 +16378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -22962,7 +22981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8113208, g: 0.27171594, b: 0.27171594, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -33252,7 +33271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -33262,7 +33281,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 704425c4bda9c594c8c2198a347b2ce9, type: 3}
     m_FontSize: 30
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -33272,7 +33291,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Q  U  I  T
+  m_Text: Q    U    I    T
 --- !u!222 &1304546743
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40545,7 +40564,7 @@ PrefabInstance:
     - target: {fileID: 8211215429941714923, guid: d2073663564b3e34e9c316cf77c96a9d,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.62412846
+      value: 0.9513589
       objectReference: {fileID: 0}
     - target: {fileID: 8211215429941714923, guid: d2073663564b3e34e9c316cf77c96a9d,
         type: 3}
@@ -40555,22 +40574,22 @@ PrefabInstance:
     - target: {fileID: 8211215429941714923, guid: d2073663564b3e34e9c316cf77c96a9d,
         type: 3}
       propertyPath: m_Size.z
-      value: 1.7274829
+      value: 2.3012035
       objectReference: {fileID: 0}
     - target: {fileID: 8211215429941714923, guid: d2073663564b3e34e9c316cf77c96a9d,
         type: 3}
       propertyPath: m_Center.x
-      value: 0.028037604
+      value: 0.04255998
       objectReference: {fileID: 0}
     - target: {fileID: 8211215429941714923, guid: d2073663564b3e34e9c316cf77c96a9d,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.00000048328144
+      value: -0.0000004846967
       objectReference: {fileID: 0}
     - target: {fileID: 8211215429941714923, guid: d2073663564b3e34e9c316cf77c96a9d,
         type: 3}
       propertyPath: m_Center.z
-      value: 0.021375304
+      value: 0.029609889
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6601819965519879049, guid: d2073663564b3e34e9c316cf77c96a9d, type: 3}
@@ -49837,7 +49856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.2627451, g: 0.2627451, b: 0.2627451, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -55821,7 +55840,7 @@ PrefabInstance:
     - target: {fileID: 8211215429941714923, guid: d2073663564b3e34e9c316cf77c96a9d,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.62412846
+      value: 0.93691576
       objectReference: {fileID: 0}
     - target: {fileID: 8211215429941714923, guid: d2073663564b3e34e9c316cf77c96a9d,
         type: 3}
@@ -55831,12 +55850,12 @@ PrefabInstance:
     - target: {fileID: 8211215429941714923, guid: d2073663564b3e34e9c316cf77c96a9d,
         type: 3}
       propertyPath: m_Size.z
-      value: 1.7274829
+      value: 2.8690217
       objectReference: {fileID: 0}
     - target: {fileID: 8211215429941714923, guid: d2073663564b3e34e9c316cf77c96a9d,
         type: 3}
       propertyPath: m_Center.x
-      value: 0.028037604
+      value: -0.0024465567
       objectReference: {fileID: 0}
     - target: {fileID: 8211215429941714923, guid: d2073663564b3e34e9c316cf77c96a9d,
         type: 3}
@@ -55846,7 +55865,7 @@ PrefabInstance:
     - target: {fileID: 8211215429941714923, guid: d2073663564b3e34e9c316cf77c96a9d,
         type: 3}
       propertyPath: m_Center.z
-      value: 0.021375304
+      value: 0.07294868
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6601819965519879049, guid: d2073663564b3e34e9c316cf77c96a9d, type: 3}

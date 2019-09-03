@@ -20,6 +20,4 @@ public class GolfBall : MonoBehaviour
             new WaitForSeconds(1f);
         }
     }
-
-    
 }

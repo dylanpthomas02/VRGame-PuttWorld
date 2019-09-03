@@ -66,7 +66,7 @@ public class ScoreManager : MonoBehaviour
         else if (cumulativeParScore < 0)
         {   
             // under par
-            playerParScoreText[currentHole].text = "-" + cumulativeParScore.ToString();
+            playerParScoreText[currentHole].text = cumulativeParScore.ToString();
             playerParScoreText[currentHole].GetComponent<Text>().color = Color.green;
         }
         else
